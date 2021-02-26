@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов\Other">
+      <UniqueIdentifier>{6532a085-f90d-4f40-a163-3e3ee1148ba8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы ресурсов\Intersector">
+      <UniqueIdentifier>{5db36d38-2ad2-476e-aad5-92eb0dbc3c52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы ресурсов\Intersector\Tree">
+      <UniqueIdentifier>{eb2aeebe-7d41-4994-92e2-57c6679d5448}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="NewIdeas.h">
+      <Filter>Файлы ресурсов\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Array.h">
+      <Filter>Файлы ресурсов\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\Test.h">
+      <Filter>Файлы ресурсов</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersector\Tree\collision3d.h">
+      <Filter>Файлы ресурсов\Intersector\Tree</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersector\Tree\cube3d.h">
+      <Filter>Файлы ресурсов\Intersector\Tree</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersector\Tree\LastLeaf.h">
+      <Filter>Файлы ресурсов\Intersector\Tree</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersector\Tree\Leaf.h">
+      <Filter>Файлы ресурсов\Intersector\Tree</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersector\Tree\MiddleLeaf.h">
+      <Filter>Файлы ресурсов\Intersector\Tree</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersector\Tree\point3d.h">
+      <Filter>Файлы ресурсов\Intersector\Tree</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersector\Tree\Tree3d.h">
+      <Filter>Файлы ресурсов\Intersector\Tree</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersector\point6d.h">
+      <Filter>Файлы ресурсов\Intersector</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersector\cube6d.h">
+      <Filter>Файлы ресурсов\Intersector</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersector\boundary.h">
+      <Filter>Файлы ресурсов\Intersector</Filter>
+    </ClInclude>
+    <ClInclude Include="Interfaces.h">
+      <Filter>Файлы ресурсов\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Liner.h">
+      <Filter>Файлы ресурсов</Filter>
+    </ClInclude>
+    <ClInclude Include="npoint_iterator.h">
+      <Filter>Файлы ресурсов</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersector\Intersector3d.h">
+      <Filter>Файлы ресурсов\Intersector</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
