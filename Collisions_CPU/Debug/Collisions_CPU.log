@@ -1,7 +1,2 @@
 ﻿  main.cpp
-c:\users\xiaomi\source\repos\collisions_cpu\collisions_cpu\main.cpp(90): warning C4091: : пропускается слева от "std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>", когда ни одна переменная не объявлена
-          with
-          [
-              _Ty=point3d
-          ]
   Collisions_CPU.vcxproj -> C:\Users\Xiaomi\source\repos\Collisions_CPU\Debug\Collisions_CPU.exe

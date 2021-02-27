@@ -31,14 +31,14 @@ struct collision3d
 		return st;
 	}
 
-	/*bool operator== (const collision3d<IIterator>& other)
+	bool operator== (const collision3d<IIterator>& other)
 	{
 		const std::set s_a1(other.apoints);
 		const std::set s_a2(apoints);
 
 		const std::set s_b1(other.bpoints);
 		const std::set s_b2(bpoints);
-	}*/
+	}
 };
 
 

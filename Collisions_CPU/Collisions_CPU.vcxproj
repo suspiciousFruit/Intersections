@@ -142,7 +142,8 @@
     <ClInclude Include="Intersector\Tree\Tree3d.h" />
     <ClInclude Include="NewIdeas.h" />
     <ClInclude Include="Liner.h" />
-    <ClInclude Include="npoint_iterator.h" />
+    <ClInclude Include="npoint3d.h" />
+    <ClInclude Include="Test\CompileTest.h" />
     <ClInclude Include="Test\Test.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

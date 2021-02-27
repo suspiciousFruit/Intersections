@@ -17,6 +17,9 @@ public:
 	MiddleLeaf(const cube3d& cube) : Leaf<IIterator>(cube)
 	{ }
 
+	MiddleLeaf() : Leaf<IIterator>()
+	{ }
+
 	virtual ~MiddleLeaf()
 	{
 		for (size_t i = 0; i < 8; ++i)

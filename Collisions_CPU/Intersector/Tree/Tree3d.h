@@ -21,6 +21,7 @@ private:
 	std::vector<LastLeaf<IIterator>*> lasts_;
 public:
 	Tree(const cube3d& space, size_t depth);
+	Tree(size_t depth);
 
 	~Tree();
 
@@ -59,6 +60,34 @@ public:
 	}
 };
 
+
+
+template <typename IIterator>
+Tree<IIterator>::Tree(const cube3d& cube, size_t depth)
+{
+	if (depth == 0) throw std::exception("Depth can't be 0!");
+
+	root_ = new MiddleLeaf<IIterator>(cube);
+	root_->make_childs(depth);
+	root_->check_in_if_last(lasts_);
+}
+
+template <typename IIterator>
+Tree<IIterator>::Tree(size_t depth)
+{
+	if (depth == 0) throw std::exception("Depth can't be 0!");
+
+	root_ = new MiddleLeaf<IIterator>();
+	root_->make_childs(depth);
+	root_->check_in_if_last(lasts_);
+}
+
+template <typename IIterator>
+Tree<IIterator>::~Tree()
+{
+	delete root_;
+}
+
 template <typename IIterator>
 template <typename Container>
 void Tree<IIterator>::sieve_a(const Container& array)
@@ -90,24 +119,6 @@ void Tree<IIterator>::sieve_b_iterable(const Container& array)
 	for (auto iter = std::begin(array); iter != std::end(array); ++iter)
 		root_->sieve_b(*iter);
 }
-
-
-template <typename IIterator>
-Tree<IIterator>::Tree(const cube3d& cube, size_t depth)
-{
-	if (depth == 0) throw std::exception("Depth can't be 0!");
-
-	root_ = new MiddleLeaf<IIterator>(cube);
-	root_->make_childs(depth);
-	root_->check_in_if_last(lasts_);
-}
-
-template <typename IIterator>
-Tree<IIterator>::~Tree()
-{
-	delete root_;
-}
-
 
 template <typename IIterator>
 void Tree<IIterator>::update_cube(const cube3d& cube)

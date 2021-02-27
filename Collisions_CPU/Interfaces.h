@@ -16,6 +16,8 @@ public:
 	Iter end() const;
 };
 
+// PointArrayT massive with points: iteratble, *iter return const point3d&
+
 //
 // Интерфейс для итератора, который возвращает IArray
 //

@@ -52,46 +52,11 @@ std::vector<point6d> base6d = {
 	{7, 7, 5, 3.1, 2.8, 3.1}
 };
 
-#include "Intersector/Tree/Tree3d.h"
-#include "npoint_iterator.h"
-
-void test_tree()
-{
-	cube3d cube(0, 1, 0, 1, 0, 1);
-	// Test for npoint3d vector
-	std::vector<npoint3d> vec_t1(4);
-	Tree<typename VectorAdapter::const_iterator> tree_t1(cube, 1);
-	TreeAdapter a(vec_t1);
-	tree_t1.sieve_a(TreeAdapter(vec_t1));
-
-
-	// Test for point3d vector
-	std::vector<point3d> vec_t2(4);
-	Tree<std::vector<point3d>::const_iterator> tree_t2(cube, 1);
-	tree_t2.sieve_b(vec_t2);
-}
-
-
-
+#include "Test/CompileTest.h"
 
 int main()
 {
-	//maintest();
-	test_tree();
-
-	std::vector<npoint3d> a(4);
-	std::vector<npoint3d> b(4);
-	cube3d cube(0, 10, 0, 10, 0, 10);
-
-	Intersector3d inter(
-		base_points,
-		other_points,
-		cube);
-	
-	const auto colls = inter.make_iterations(4);
-	for (const auto& col : colls)
-		std::cout << col << std::endl;
-
+	test__runall();
 
 	return 0;
 }

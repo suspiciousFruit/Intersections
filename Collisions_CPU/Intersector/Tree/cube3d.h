@@ -20,12 +20,27 @@ public:
 		x_up(xUp), x_down(xDown), y_up(yUp), y_down(yDown), z_up(zUp), z_down(zDown)
 	{ }
 
-	inline bool isfit(const point3d& p) const
+	cube3d()
+	{
+		for (size_t i = 0; i < 6; ++i)
+			data[i] = 0.0;
+	}
+
+	/*cube3d(const std::pair<double, double> xbound,
+		const std::pair<double, double> ybound,
+		const std::pair<double, double> zbound) :
+		x_up(xbound.first), x_down(xbound.second), y_up(ybound.first), y_down(ybound.second),
+		z_up(xbound)
+	{
+
+	}*/
+
+	/*inline bool isfit(const point3d& p) const
 	{
 		return p.x <= x_up && p.x >= x_down &&
 			p.y <= y_up && p.y >= y_down &&
 			p.z <= z_up && p.z >= z_down;
-	}
+	}*/
 
 	template <typename IIterator>
 	inline bool isfit(const IIterator pptr) const
@@ -63,6 +78,21 @@ public:
 	static cube3d make_cube(double size, const point3d& center = point3d(0,0,0))
 	{
 		return cube3d(0, size, 0, size, 0, size);
+	}
+
+	bool operator== (const point3d& other) const
+	{
+		const double* otherdata = other.data;
+		for (size_t i = 0; i < 6; ++i)
+			if (data[i] != otherdata[i])
+				return false;
+
+		return true;
+	}
+
+	bool operator!= (const point3d& other) const
+	{
+		return !(*this == other);
 	}
 };
 

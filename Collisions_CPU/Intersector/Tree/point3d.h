@@ -25,6 +25,16 @@ struct point3d
 	point3d() : x(0), y(0), z(0)
 	{ }
 
+	inline bool operator== (const point3d& other) const
+	{
+		return x == other.x && y == other.y && z == other.z;
+	}
+
+	inline bool operator!= (const point3d& other) const
+	{
+		return !(*this == other);
+	}
+
 	friend std::ostream& operator<< (std::ostream& stream, const point3d& p)
 	{
 		const char* del = ",";

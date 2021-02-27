@@ -4,10 +4,12 @@
 #include "./cube3d.h"
 
 
+
+// Template - type of object which stored by LastLeaf
 template <typename IIterator>
 class LastLeaf;
 
-// Базовый лист октодерева
+// Base class for all octo leaves
 template <typename IIterator>
 class Leaf
 {
@@ -19,6 +21,8 @@ public:
 	{ }
 
 	Leaf(const cube3d& cube) : cube_(cube) { }
+	Leaf() { }
+
 	virtual ~Leaf() { }
 
 	virtual void sieve_a(const IIterator) = 0;

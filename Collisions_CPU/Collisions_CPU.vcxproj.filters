@@ -22,6 +22,9 @@
     <Filter Include="Файлы ресурсов\Intersector\Tree">
       <UniqueIdentifier>{eb2aeebe-7d41-4994-92e2-57c6679d5448}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы ресурсов\Test">
+      <UniqueIdentifier>{58451ab0-bc75-44a3-9dce-312b950f87dc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -34,9 +37,6 @@
     </ClInclude>
     <ClInclude Include="Array.h">
       <Filter>Файлы ресурсов\Other</Filter>
-    </ClInclude>
-    <ClInclude Include="Test\Test.h">
-      <Filter>Файлы ресурсов</Filter>
     </ClInclude>
     <ClInclude Include="Intersector\Tree\collision3d.h">
       <Filter>Файлы ресурсов\Intersector\Tree</Filter>
@@ -74,11 +74,17 @@
     <ClInclude Include="Liner.h">
       <Filter>Файлы ресурсов</Filter>
     </ClInclude>
-    <ClInclude Include="npoint_iterator.h">
-      <Filter>Файлы ресурсов</Filter>
-    </ClInclude>
     <ClInclude Include="Intersector\Intersector3d.h">
       <Filter>Файлы ресурсов\Intersector</Filter>
+    </ClInclude>
+    <ClInclude Include="npoint3d.h">
+      <Filter>Файлы ресурсов</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\Test.h">
+      <Filter>Файлы ресурсов\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\CompileTest.h">
+      <Filter>Файлы ресурсов\Test</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

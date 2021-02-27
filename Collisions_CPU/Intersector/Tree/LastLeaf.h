@@ -19,6 +19,9 @@ public:
 	LastLeaf(const cube3d& cube) : Leaf<IIterator>(cube)
 	{ }
 
+	LastLeaf() : Leaf<IIterator>()
+	{ }
+
 	virtual ~LastLeaf()
 	{ }
 
@@ -47,13 +50,14 @@ public:
 		if (apoints_.size() == 0 && bpoints_.size() == 0)
 			return;
 
-		cube_.print();
+		/*cube_.print();
 		std::cout << "Base points:" << std::endl;
 		for (const auto& p : apoints_)
 			std::cout << *p << std::endl;
+
 		std::cout << "Other points:" << std::endl;
 		for (const auto& p : bpoints_)
-			std::cout << *p << std::endl;
+			std::cout << *p << std::endl;*/
 	}
 
 	virtual void update_cube(double xDown, double xUp,
