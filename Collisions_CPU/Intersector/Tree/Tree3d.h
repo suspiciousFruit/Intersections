@@ -18,6 +18,7 @@ class Tree
 {
 private:
 	Leaf<IIterator>* root_;
+	size_t depth_;
 	std::vector<LastLeaf<IIterator>*> lasts_;
 public:
 	Tree(const cube3d& space, size_t depth);
@@ -26,6 +27,9 @@ public:
 	~Tree();
 
 	void update_cube(const cube3d&);
+	const cube3d& get_cube() const;
+
+	size_t get_depth() const;
 
 	void clean_buffers();
 	template <typename Container>
@@ -47,11 +51,6 @@ public:
 	void sieve_b_iterable(const Container&);
 
 
-	//template <typename First, typename Last>
-	//void sieve_base(First, Last);
-	//template <typename First, typename Last>
-	//void sieve_other(First, Last);
-
 	// Debug functions
 	void print_buffers()
 	{
@@ -63,7 +62,7 @@ public:
 
 
 template <typename IIterator>
-Tree<IIterator>::Tree(const cube3d& cube, size_t depth)
+Tree<IIterator>::Tree(const cube3d& cube, size_t depth) : depth_(depth)
 {
 	if (depth == 0) throw std::exception("Depth can't be 0!");
 
@@ -73,7 +72,7 @@ Tree<IIterator>::Tree(const cube3d& cube, size_t depth)
 }
 
 template <typename IIterator>
-Tree<IIterator>::Tree(size_t depth)
+Tree<IIterator>::Tree(size_t depth) : depth_(depth)
 {
 	if (depth == 0) throw std::exception("Depth can't be 0!");
 
@@ -127,6 +126,18 @@ void Tree<IIterator>::update_cube(const cube3d& cube)
 }
 
 template <typename IIterator>
+const cube3d& Tree<IIterator>::get_cube() const
+{
+	return root_->get_cube();
+}
+
+template <typename IIterator>
+size_t Tree<IIterator>::get_depth() const
+{
+	return depth_;
+}
+
+template <typename IIterator>
 void Tree<IIterator>::clean_buffers()
 {
 	for (const auto last : lasts_)
@@ -150,3 +161,4 @@ void Tree<IIterator>::get_full_buffers(Container& cont)
 			cont.push_back(collision);
 		}
 }
+
