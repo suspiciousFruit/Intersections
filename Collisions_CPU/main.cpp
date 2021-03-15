@@ -52,13 +52,18 @@ std::vector<point6d> base6d = {
 	{7, 7, 5, 3.1, 2.8, 3.1}
 };
 
-#include "Test/CompileTest.h"
+
+#include "Test/Scripts/Test.h"
+
+
+
+
 
 
 int main()
 {
 	//test__runall();
-	Intersector3d inter(apoints, bpoints);
+	/*Intersector3d inter(apoints, bpoints);
 	const auto [xprec, yprec, zprec] = inter.get_real_precision(0.5);
 	std::cout << "xPresssion: " << xprec << std::endl;
 	std::cout << "yPresssion: " << yprec << std::endl;
@@ -67,7 +72,17 @@ int main()
 	const auto colls = inter.intesect(0.5);
 	for (const auto& col : colls)
 		std::cout << col << std::endl;
+		*/
+
+	intersect3d_test("test_plane_0.csv",
+		"test_plane_1.csv",
+		"test_plane_int.csv");
+
+	intersect3d_test("test_manifold_3d_0.csv",
+		"test_manifold_3d_1.csv",
+		"test_manifold_3d_int.csv");
+
+
 
 	return 0;
 }
-

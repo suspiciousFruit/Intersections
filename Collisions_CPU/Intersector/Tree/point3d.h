@@ -45,7 +45,8 @@ struct point3d
 
 	friend std::istream& operator>> (std::istream& stream, point3d& p)
 	{
-		stream >> p.x >> p.y >> p.z;
+		char del;
+		stream >> p.x >> del >> p.y >> del >> p.z;
 
 		return stream;
 	}

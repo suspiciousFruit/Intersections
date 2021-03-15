@@ -25,6 +25,12 @@
     <Filter Include="Файлы ресурсов\Test">
       <UniqueIdentifier>{58451ab0-bc75-44a3-9dce-312b950f87dc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы ресурсов\TreeAdapter">
+      <UniqueIdentifier>{6d00755c-4b95-4845-b936-2a6267393b88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы ресурсов\Test\Scripts">
+      <UniqueIdentifier>{ec409be1-2502-4dd8-9464-954c5e1281ca}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -77,14 +83,23 @@
     <ClInclude Include="Intersector\Intersector3d.h">
       <Filter>Файлы ресурсов\Intersector</Filter>
     </ClInclude>
-    <ClInclude Include="npoint3d.h">
-      <Filter>Файлы ресурсов</Filter>
+    <ClInclude Include="TreeAdapter\npoint3d.h">
+      <Filter>Файлы ресурсов\TreeAdapter</Filter>
     </ClInclude>
-    <ClInclude Include="Test\Test.h">
-      <Filter>Файлы ресурсов\Test</Filter>
+    <ClInclude Include="TreeAdapter\ntpoint3d.h">
+      <Filter>Файлы ресурсов\TreeAdapter</Filter>
     </ClInclude>
-    <ClInclude Include="Test\CompileTest.h">
-      <Filter>Файлы ресурсов\Test</Filter>
+    <ClInclude Include="TreeAdapter\TreeAdapter.h">
+      <Filter>Файлы ресурсов\TreeAdapter</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\Scripts\CompileTest.h">
+      <Filter>Файлы ресурсов\Test\Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\Scripts\Test.h">
+      <Filter>Файлы ресурсов\Test\Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\Scripts\Utility.h">
+      <Filter>Файлы ресурсов\Test\Scripts</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -51,6 +51,7 @@ public:
 		: tree_(depth), apoints_(apoints), bpoints_(bpoints)
 	{
 		tree_.update_cube(get_boundary_cube3d(apoints, bpoints));
+		std::cout << get_boundary_cube3d(apoints, bpoints) << std::endl;
 	}
 private:
 	void make_first_iteration()
@@ -100,6 +101,7 @@ private:
 public:
 	std::vector<collision3d<IteratorT>>&& make_iterations(size_t number_of_iterations)
 	{
+		std::cout << "All iterations: " << number_of_iterations << std::endl;
 		// Деалем первый проход
 		make_first_iteration();
 
@@ -136,10 +138,11 @@ public:
 	{
 		const size_t it_num = get_iteration_number(needed_precision);
 		const cube3d& cube = tree_.get_cube();
+		const double depth = tree_.get_depth();
 
-		const double xprec = (cube.x_up - cube.x_down) / std::pow(2.0, it_num * 1);
-		const double yprec = (cube.y_up - cube.y_down) / std::pow(2.0, it_num * 1);
-		const double zprec = (cube.z_up - cube.z_down) / std::pow(2.0, it_num * 1);
+		const double xprec = (cube.x_up - cube.x_down) / std::pow(2.0, it_num * depth);
+		const double yprec = (cube.y_up - cube.y_down) / std::pow(2.0, it_num * depth);
+		const double zprec = (cube.z_up - cube.z_down) / std::pow(2.0, it_num * depth);
 
 		return { xprec, yprec, zprec };
 	}

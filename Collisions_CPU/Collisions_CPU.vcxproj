@@ -142,9 +142,12 @@
     <ClInclude Include="Intersector\Tree\Tree3d.h" />
     <ClInclude Include="NewIdeas.h" />
     <ClInclude Include="Liner.h" />
-    <ClInclude Include="npoint3d.h" />
-    <ClInclude Include="Test\CompileTest.h" />
-    <ClInclude Include="Test\Test.h" />
+    <ClInclude Include="Test\Scripts\CompileTest.h" />
+    <ClInclude Include="Test\Scripts\Test.h" />
+    <ClInclude Include="Test\Scripts\Utility.h" />
+    <ClInclude Include="TreeAdapter\npoint3d.h" />
+    <ClInclude Include="TreeAdapter\ntpoint3d.h" />
+    <ClInclude Include="TreeAdapter\TreeAdapter.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
